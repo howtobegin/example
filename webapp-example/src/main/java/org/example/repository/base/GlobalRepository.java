@@ -1,4 +1,4 @@
-package org.webapp.repository.base;
+package org.example.repository.base;
 
 import java.io.Serializable;
 

@@ -1,11 +1,11 @@
-package org.webapp.service;
+package org.example.service;
 
 import java.util.List;
 
+import org.example.bean.User;
+import org.example.repository.UserRepsoitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.webapp.bean.User;
-import org.webapp.repository.UserRepsoitory;
 
 @Service
 public class UserService {

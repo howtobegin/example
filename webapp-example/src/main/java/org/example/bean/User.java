@@ -1,11 +1,11 @@
-package org.webapp.bean;
+package org.example.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import org.example.bean.base.IDEntity;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.webapp.bean.base.IDEntity;
 
 @Entity
 @DynamicInsert

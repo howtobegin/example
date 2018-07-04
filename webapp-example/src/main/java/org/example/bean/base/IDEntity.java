@@ -1,4 +1,4 @@
-package org.webapp.bean.base;
+package org.example.bean.base;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

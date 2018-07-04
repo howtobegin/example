@@ -17,7 +17,7 @@
 	<description>基础配置 </description>
 	
 	<!-- 使用 annotation自动注册bean,并检查@Service, @Repository,@Component注解 -->
-	<context:component-scan base-package="org.webapp">
+	<context:component-scan base-package="org.example">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 	</context:component-scan>
@@ -69,7 +69,7 @@
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
-		<property name="packagesToScan" value="org.webapp.bean"/>
+		<property name="packagesToScan" value="org.example.bean"/>
 		<property name="jpaProperties">
 			<props>
 				<!-- 命名规则 -->
@@ -85,7 +85,7 @@
 		<property name="database" value="MYSQL"/>
 	</bean>
 	<!-- Spring Data Jpa配置, 扫描base-package下所有继承于Repository<T,ID>的接口 -->
- 	<jpa:repositories base-package="org.webapp.repository" transaction-manager-ref="jpaTransactionManager" entity-manager-factory-ref="entityManagerFactory"/>
+ 	<jpa:repositories base-package="org.example.repository" transaction-manager-ref="jpaTransactionManager" entity-manager-factory-ref="entityManagerFactory"/>
  	<!-- Jpa 事务配置 -->
     <bean id="jpaTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
